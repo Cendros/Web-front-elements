@@ -1,0 +1,71 @@
+:root {
+    --bg-primary: #000;
+    
+    --text-primary: #fff;
+
+    --button-primary: #1899D6;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 3vw;
+    font-family: "Rubik", sans-serif;
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.text {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    height: 50vh;
+}
+
+.letter {
+    top: 40%;
+    display: inline-block;
+    animation: move 3s linear infinite; 
+}
+
+@-webkit-keyframes move {
+    0% { font-size: 1rem;}
+    50% { font-size: 3rem;}
+    100% { font-size: 1rem;}
+}
+
+.button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    appearance: button;
+    background-color: var(--button-primary);
+    color: var(--text-primary);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
