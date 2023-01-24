@@ -1,0 +1,50 @@
+:root {
+    --bg-primary: #000;
+    
+    --text-primary: #fff;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 3vw;
+    font-family: "Rubik", sans-serif;
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text:has(.fancy:hover) .word:not(.fancy:hover) {
+    opacity: .2;
+    transition-duration: 500ms;
+}
+
+.word {
+    transition-duration: 500ms;
+}
+
+p {
+    margin: 0rem;
+}
+
+.fancy > .letter {
+    display: inline-block;
+    transition: transform 500ms ease;
+}
+
+.fancy:hover > .letter {
+    transition-duration: 800ms;
+}
